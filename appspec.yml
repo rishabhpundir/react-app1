@@ -1,8 +1,9 @@
 version: 0.0
 os: linux
+
 files:
   - source: /
-    destination: /home/ubuntu/server
+    destination: /home/ubuntu
 
 permissions:
   - object: /
@@ -11,7 +12,12 @@ permissions:
     group: ubuntu
 
 hooks:
+  AfterInstall:
+    - location: scripts/after_install.sh
+      timeout: 300
+#      runas: root
+
   ApplicationStart:
     - location: scripts/app_start.sh
       timeout: 300
-      runas: root
+      # runas: root

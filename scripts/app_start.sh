@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # Navigate to the deployment directory
-cd /home/ubuntu/server
+cd /home/ubuntu
 
 # Install dependencies, if needed
-npm -g serve
 serve -s build
 

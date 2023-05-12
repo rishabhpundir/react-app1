@@ -6,6 +6,7 @@ phases:
       nodejs: latest
     commands:
       - echo Installing dependencies...
+      - cd /home/ubuntu/server
       - npm install
   build:
     commands:
