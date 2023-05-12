@@ -4,7 +4,6 @@
 cd /home/ubuntu/server
 
 # Install dependencies, if needed
-# npm ci
+npm -g serve
+serve -s build
 
-# Start the React app
-npm start
