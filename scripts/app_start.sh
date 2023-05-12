@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Navigate to the deployment directory
+#_Change_Working_Directory
 cd /home/ubuntu
-# Install dependencies, if needed
-echo "gonna serve build now"
-serve -s build
-echo "app started"
 
+#_Delete_Old_PM2_Service
+pm2 delete Frontend
+pm2 start server.js --name Frontend
